@@ -44,13 +44,13 @@ export default function HomeScreen() {
               alt="Proactive, Agentic Intelligence"
               className="h-10 w-auto"
             />
-            <span className="text-lg font-bold text-[#f7f7f4]">boom</span>
+            <span className="text-lg font-bold text-[#f7f7f4]">boom!</span>
           </div>
 
           {/* Right: Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/rob-9/boom"
+              href="https://github.com/boomread"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-2 rounded-lg hover:bg-[#f7f7f4]/10 transition-all duration-200"
