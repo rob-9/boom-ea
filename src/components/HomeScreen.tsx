@@ -38,7 +38,7 @@ export default function HomeScreen() {
       <div className="fixed top-8 left-0 right-0 z-50 px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Left: Logo */}
-          <div className="flex items-center gap-3 ml-[75px]">
+          <div className="flex items-center gap-3 xl:ml-[75px]">
             <img
               src="/logo.png"
               alt="Proactive, Agentic Intelligence"
@@ -83,20 +83,20 @@ export default function HomeScreen() {
 
       {/* Hero Section */}
       <main className="relative z-10 px-8 min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 xl:grid-cols-2 gap-12 items-start xl:items-center">
           {/* Left: Hero Content */}
-          <div className="flex flex-col justify-between items-start text-left ml-[75px] h-[580px]">
-            <div className="pt-36">
+          <div className="flex flex-col justify-start xl:justify-between items-start text-left xl:ml-[75px] pt-36 xl:pt-0 xl:h-[580px]">
+            <div className="xl:pt-36">
               <h1 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
                 Read Smarter.
               </h1>
 
               <div className="text-xl md:text-2xl text-[#f7f7f4]/80 mb-10 h-8 flex items-center gap-2">
-                <span className="relative px-3 py-1.5">
+                <span className="relative px-3 py-1.5 shrink-0">
                   <span className="absolute inset-0 bg-gradient-to-r from-[#d4a574]/30 to-[#c9986a]/30 blur-sm rounded-lg"></span>
                   <span className="relative">boom</span>
                 </span>
-                <div className="relative h-8 flex items-center min-w-[500px]">
+                <div className="relative h-8 flex items-center xl:min-w-[500px]">
                   {words.map((word, index) => {
                     const isActive = index === currentWord
                     const isPrevious = index === previousWord
@@ -134,8 +134,8 @@ export default function HomeScreen() {
               </div>
             </div>
 
-            {/* Supported Formats - Aligned with bottom of demo */}
-            <div className="flex flex-col items-start">
+            {/* Supported Formats - Only show on large screens, aligned with bottom of demo */}
+            <div className="hidden xl:flex flex-col items-start mt-auto">
               <div className="flex items-center mb-2.5">
                 <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#f7f7f4]/20"></div>
                 <p className="text-[10px] text-[#f7f7f4]/40 uppercase tracking-wider mx-2.5">Supported Formats</p>
@@ -158,6 +158,25 @@ export default function HomeScreen() {
           <div className="relative">
             <div className="w-full h-[580px] bg-[#1a1812] rounded-xl border border-[#f7f7f4]/10 overflow-hidden shadow-2xl">
               <ReaderDemo />
+            </div>
+
+            {/* Supported Formats - Show on small screens, under demo */}
+            <div className="xl:hidden flex flex-col items-start mt-8">
+              <div className="flex items-center mb-2.5">
+                <div className="h-px w-8 bg-gradient-to-r from-transparent to-[#f7f7f4]/20"></div>
+                <p className="text-[10px] text-[#f7f7f4]/40 uppercase tracking-wider mx-2.5">Supported Formats</p>
+                <div className="h-px w-8 bg-gradient-to-l from-transparent to-[#f7f7f4]/20"></div>
+              </div>
+
+              <div className="flex items-center gap-2.5 text-[10px] text-[#f7f7f4]/60 pl-4">
+                <span className="font-medium">TXT</span>
+                <span>•</span>
+                <span className="font-medium">PDF</span>
+                <span>•</span>
+                <span className="font-medium">EPUB</span>
+                <span>•</span>
+                <span className="font-medium">DOCX</span>
+              </div>
             </div>
           </div>
 
